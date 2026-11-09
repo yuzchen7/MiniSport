@@ -1,0 +1,61 @@
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* height: 100%; */
+    background: transparent;
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--background_color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.light {
+    --background_color: rgba(248, 248, 250, 0.72);
+    --text: rgb(32, 32, 34);
+    --text_hover: rgb(255, 255, 255);
+
+    --icon_default: rgb(122, 122, 128);
+    --icon_hover: rgba(0, 122, 255, 0.781);
+
+    --item_hover: rgba(0, 122, 255, 0.781);
+
+    --settings-panel-top: rgba(60, 60, 67, 0.12);
+    --add-folder-btn: rgba(0, 0, 0, 0.05);
+
+    --delete-btn: rgb(255, 69, 58);
+    --delete-btn-hover: rgb(255, 255, 255);
+
+    --google-icon: rgba(0, 122, 255, 0.781);
+    --google-icon-hover: rgba(255, 255, 255, 0.781);
+}
+
+.dark {
+    --background_color: rgba(28, 28, 30, 0);
+    --text: rgb(245, 245, 247);
+    --text_hover: rgb(255, 255, 255);
+
+    --icon_default: rgba(235, 235, 245, 0.65);
+    --icon_hover: rgb(255, 255, 255);
+
+    --item_hover: rgba(255, 255, 255, 0.08);
+
+    --settings-panel-top: rgba(255, 255, 255, 0.08);
+    --add-folder-btn: rgba(255, 255, 255, 0.06);
+
+    --delete-btn: rgb(255, 96, 92);
+    --delete-btn-hover: rgb(255, 69, 58);
+
+    --google-icon: rgba(255, 255, 255, 0.781);
+    --google-icon-hover: rgba(255, 255, 255, 0.781);
+}

@@ -1,0 +1,47 @@
+.searchbox {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    -webkit-app-region: drag;
+}
+
+.search-icon {
+    padding-left: 20px;
+    color: var(--icon_default);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 23px;
+    padding: 18px;
+    -webkit-app-region: no-drag;
+    caret-color:rgba(0, 122, 255, 0.781);
+}
+
+.settings-icon {
+    color: var(--icon_default);
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+    padding-right: 20px;
+    flex-shrink: 0;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.settings-icon.hide {
+    opacity: 0;
+    transform: scale(0.8) translateY(-2px);
+    pointer-events: none;
+}
+
+.settings-icon:hover {
+    color: var(--icon_hover);
+    transform: scale(0.9);
+}

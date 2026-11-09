@@ -1,0 +1,95 @@
+.resultList {
+    margin-top: 0;
+    min-height: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    /* scrollbar-width: none; */
+    /* -ms-overflow-style: none; */
+    border-top: 1px solid var(--settings-panel-top) !important;
+}
+
+.resultList::-webkit-scrollbar {
+    width: 5px;
+}
+
+.resultList::-webkit-scrollbar-track {
+    background: transparent;
+    margin-right: 20px;
+}
+
+.resultList::-webkit-scrollbar-thumb {
+    background: var(--item_hover);
+    border-radius: 999px;
+}
+
+.resultList::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.6);
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    gap: 12px;
+    cursor: pointer;
+    border-radius: 1.6em;
+}
+
+.content {
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.title {
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.path {
+    margin-top: 4px;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.result-item:hover, .result-item.selected {
+    background: var(--item_hover);
+    color: var(--text_hover);
+}
+
+.result-item:hover .title,
+.result-item:hover .path,
+.result-item:hover .id,
+.result-item.selected .title,
+.result-item.selected .path,
+.result-item.selected .id {
+    color: var(--text_hover);
+}
+
+.id {
+    margin-top: 4px;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+  color: var(--text);
+}
+
+.google-icon {
+    color: var(--google-icon);
+}
+
+.result-item:hover .google-icon {
+    color: var(--google-icon-hover);
+}

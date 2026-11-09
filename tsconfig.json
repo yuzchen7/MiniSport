@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "dist/",
+    "rootDir": "src",
+    "strict": true
+  },
+  "include": [
+    "src/main/**/*",
+    "src/database/**/*",
+    "src/indexer/**/*",
+    "src/preload/**/*",
+    "src/share/**/*",
+    "src/service/**/*"
+  ]
+}

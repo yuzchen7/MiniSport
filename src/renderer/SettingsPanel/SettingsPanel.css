@@ -1,0 +1,115 @@
+.settings-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 12px;
+    box-sizing: border-box;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    min-height: 0;
+
+    border-top: 1px solid var(--settings-panel-top);
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.close-btn {
+    margin-right: 20px;
+    border: none;
+    background: transparent;
+
+    color: var(--icon_default);
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.close-btn:hover {
+    color: var(--icon_hover);
+}
+
+.workspace-list {
+    max-height: 240px;
+    flex: 1;
+    overflow-y: overlay;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 4px;
+    scrollbar-gutter: stable;
+}
+
+.workspace-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    color: var(--text);
+    border-radius: 1.6em;
+    transition: background .15s ease;
+}
+
+.workspace-name {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.workspace-item:hover {
+    background: var(--item_hover);
+    color: var(--text_hover);
+}
+
+.add-folder-btn {
+    margin-top: 10px;
+    align-content: center;
+    width: 99%;
+    height: 36px;
+    border: none;
+    border-radius: 1.6em;
+    background: var(--add-folder-btn);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.add-folder-btn:hover {
+    background: var(--item_hover);
+    color: var(--text_hover);
+}
+
+.delete-btn {
+    padding-top: 4px;
+    padding-right: 10px;
+    color: var(--delete-btn);
+    pointer-events: auto;
+}
+
+.workspace-item:hover .delete-btn {
+    color: var(--delete-btn-hover);
+}
+
+.workspace-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.workspace-list::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.workspace-list:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.35);
+}

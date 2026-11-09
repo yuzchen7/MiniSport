@@ -1,0 +1,70 @@
+{
+  "name": "minisport",
+  "version": "1.4.7",
+  "main": "dist/main/main.js",
+  "description": "A file index system with Spotlight-like search capabilities",
+  "scripts": {
+    "build:main": "tsc -p tsconfig.json",
+    "build:renderer": "vite build",
+    "rebuild": "npx @electron/rebuild",
+    "dev": "vite",
+    "start": "cross-env LOCAL_TEST_DB=true electron .",
+    "build": "npm run build:main && npm run build:renderer",
+    "dist": "npm run build && electron-builder"
+  },
+  "keywords": [],
+  "author": "YuZhuang Chen",
+  "license": "ISC",
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "better-sqlite3": "^12.10.1",
+    "chokidar": "^5.0.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.6.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.9.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^41.7.1",
+    "electron-builder": "^26.5.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  },
+  "build": {
+    "appId": "com.yuzchen.minisport.app",
+    "productName": "MiniSport",
+    "npmRebuild": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [],
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    }
+  }
+}
